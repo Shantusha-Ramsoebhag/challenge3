@@ -19,11 +19,22 @@ function getAPIdataEvent() {
 
 	// render random activity
 	.then(function(response) {
-		console.log(response.result.records[2,8]);
+		console.log(response);
 		// render activity
-		//onAPISucces(response);
+		onAPISuccesEvent(response);
 	})
 }
 
+function onAPISuccesEvent(response) {
+	//var event= response.records;
+	var eventBox = document.getElementById('events');
+	
+	for(var i=0; i<response.result.records.length; i++){
+		console.log(response.result.records[i]);
+		eventBox.innerHTML += '<ul>'
+							 + '<li>'+response.result.records[i].Evenement+'</ul>'
+							 + '</ul>';
+		}
+	}
 
 getAPIdataEvent();
