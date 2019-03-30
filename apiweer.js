@@ -5,7 +5,9 @@ var apiKey = "a99d5aa817d2e9a1e613dfc5b9465eb7";
 // construct request
 
 	// get weather forecast
-	fetch(url + "&appid=" + apiKey).then(function(response){
+	fetch(url + "&appid=" + apiKey);
+
+	.then(function(response){
 		if (!response.ok) {
 			throw Error(response.statusText);
 		}
