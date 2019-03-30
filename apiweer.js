@@ -1,4 +1,3 @@
-
 function getAPIdataWeather() {
 var url = "http://api.openweathermap.org/data/2.5/weather?q=The Hague";
 var apiKey = "a99d5aa817d2e9a1e613dfc5b9465eb7";
