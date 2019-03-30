@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Back to Earth</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="challenge3.css">
+</head>
+<body>
+	<div class="grid-container">
+		<div class="grid-item-box1">
+			<header>
+				<h1 class="titel">Back to Earth</h1>
+			</header>
+		</div>
+		<div class="grid-item-box2">
+			<div class="content-box1">
+				<div class="todobox">
+					<div class="subtiteltodo_box">
+						<h3 class="subtiteltodo">What can you do today?</h3>
+					</div>
+					<input type="button" id="getActivity" value="Click me to see" onclick="getAPIdata()"/>
+					<p id="activitybox"></p>
+				</div>	
+			</div>
+		</div>
+		<div class="grid-item-box3">
+			<div class="content-box2">
+				<div class="weatherbox">
+					<div class="subtitelweather_box">
+						<h3 class="subtitelweather">Weahter</h3>
+					</div>
+				</div>
+				<div class="inputweather">
+					<p id="weather"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="challenge3.js"></script>
+	<script src="apiweer.js"></script>
+	<!--<script src="api2.js"></script>-->
+</body>
+</html>
