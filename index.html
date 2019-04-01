@@ -15,10 +15,14 @@
 		<div class="grid-item-box2">
 			<div class="content-box1">
 				<div class="todobox">
-					<div class="subtiteltodo_box">
-						<h3 class="subtiteltodo">What can you do today?</h3>
+					<p class="text text1"><font size="5">When</font> we arrive back to earth there are a list of things you could do. If you have no clue what to do, take a look at the random activity generator. This tells you what you can do.
+					</p>
+					<div class="todobox2">
+						<div class="subtiteltodo_box">
+							<h3 class="subtiteltodo">Random activity generator, click for an activity:</h3>
+						</div>
+						<input type="button" id="getActivity" value="Click me to see" onclick="getAPIdata()"/>
 					</div>
-					<input type="button" id="getActivity" value="Click me to see" onclick="getAPIdata()"/>
 				</div>	
 			</div>
 		</div>
@@ -36,15 +40,22 @@
 		</div>
 		<div class="grid-item-box4">
 			<div class="content-box3">
-				<div class="eventbox">
-					<div class="subtitelevent_box">
-						<h3 class="subtitelevent">Events</h3>
-					</div>
-					<div class="inputevents">
-						<p id="events"></p>
+					<p class="text text2"><font size="5">You</font> could also visit an event. Below here there is a list of events you could go.</p>
+					<div class="eventbox">
+						<div class="subtitelevent_box">
+							<h3 class="subtitelevent">Events</h3>
+						</div>
+						<div class="inputevents">
+							<p id="events"></p>
+						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="grid-item-box5">
+			<footer>
+				<p class="Copyright">&copy;Copyright 2019 Back to Earth</p>
+			</footer>
 		</div>
 	</div>
 	<script src="challenge3.js"></script>

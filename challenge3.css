@@ -5,6 +5,7 @@
 	font-family: "Rajdhani", sans-serif;
 	}
 
+/*Bij mobiele versie komt de content onder elkaar*/
 .grid-container{
 	display: grid;
 	grid-template-columns: 1fr;
@@ -13,6 +14,20 @@
 
 .grid-item-box2{
 	margin-top: 20px;
+	}
+
+.grid-item-box4{
+	min-height: 350px;
+	padding-bottom: 10px;
+	}
+
+.grid-item-box3{
+	height: 130px;
+	margin-top: 20px;
+	}
+
+.grid-item-box3, .grid-item-box4{
+	background-color: #cde4f4;
 	}
 
 header{
@@ -26,6 +41,21 @@ header{
 .titel{
 	color: white;
 	margin: 10px 0px 0px 10px; 
+	font-size: 30px;
+	}
+
+.text{
+	width: 300px;
+	min-height: 50px;
+	margin: auto;
+	}
+
+.text1{
+	margin-bottom: 15px;
+	}
+
+.text2{
+	margin-top: 10px;
 	}
 
 .content-box2{
@@ -57,18 +87,21 @@ header{
 	}
 
 .subtiteltodo{
-	width: 200px;
+	min-width: 350px;
 	height: 20px;
-	font-size: 17px;
 	color: white;
 	margin-top: 10px;
 	position: absolute;
+	margin-left:10px;
+	}
+
+.subtiteltodo, .subtitelweather,.subtitelevent{
+	font-size: 16px;
 	}
 
 .subtitelweather, .subtitelevent{
 	width:182px;
 	height:20px;
-	font-size: 17px;
 	color: white;
 	margin-top: 10px;
 	margin-left: 10px;
@@ -102,8 +135,15 @@ header{
 	border-radius: 3px;
 	}
 
+#weather{
+	margin: auto;
+	width: 100px;
+	height:50px;
+	padding-top: 10px;
+	}
+
 .inputevents{
-	background-color: #182834;
+	background-color:#182834;
 	color: white;
 	width: 300px;
 	min-height: 64px;
@@ -113,8 +153,165 @@ header{
 	z-index: 1;
 	border: none;
 	border-radius: 3px;
-}
+	}	
+
+#events{
+	margin: auto;
+	width: 230px;
+	padding: 15px 0px 15px 0px;
+	}
 
 ul{
 	list-style-type: none;
+	}
+
+footer{
+	display: flex;
+	width: 100%;
+	height: 66px;
+	color: white;
+	background-color: #6687a0;
+	letter-spacing: 1.5px;
+	margin-top: 20px;
+	}
+
+.Copyright{
+	align-self: center;
+	margin: auto;
+	}
+
+/* Hier komt de code voor Tablet resolutie */
+
+@media only screen and (min-width: 361px){
+	.subtiteltodo, .subtitelweather,.subtitelevent{
+		font-size: 17px;
+		}
+
+	.text{
+		width: 500px;
+		}
+
+	.todobox{
+		min-height: 170px;
+		}
+
+	.todobox2{
+		width:500px;
+		height:100px;
+		margin: auto;
+		}
+
+	#getActivity{
+		width: 500px;
+		height: 64px;
+		}
+
+	.content-box2, .content-box3{
+		width: 500px;
+		}
+
+	.content-box2{
+		margin-bottom: 0px;
+		}
+
+	.subtitelweather_box, .inputweather, .subtitelevent_box, .inputevents, .subtiteltodo_box{
+		width: 500px;
+		}
+
+	#events{
+		width: 470px;
+		}
+}
+
+@media only screen and (min-width: 766px){
+	.subtiteltodo, .subtitelweather,.subtitelevent{
+		font-size: 18px;
+		}
+
+	.grid-container{
+		grid-template-columns: 1fr 1fr;
+		}
+
+	.grid-item-box1{
+		grid-column:1/4; 
+		grid-row:1;
+		}
+
+	.grid-item-box4{
+		grid-column:1/4; 
+		grid-row:3;
+		margin-top: 15px;
+		border-top: 6px solid #182834;
+		height: 100%;
+		}
+
+	.grid-item-box5{
+		grid-column: 1/4;
+		grid-row:5;
+		}
+
+	.grid-item-box3{
+		display: flex;
+		height:190px;
+		align-items: flex-end;
+		background-color:transparent;
+		}
+
+	.content-box3{
+		margin-top: 20px;
+		display: flex;
+		flex-flow: row;
+		width: 900px;
+		}
+
+	.grid-item-box2, .grid-item-box3{
+		margin-bottom: 30px;
+		margin-top: 30px;
+		}
+
+	.eventbox{
+		margin-left: 30px;
+		}
+}
+
+@media only screen and (min-width: 1367px){
+	.subtiteltodo, .subtitelweather,.subtitelevent{
+		font-size: 20px;
+		margin-top: 12px;
+		}
+
+	.text{
+		font-size: 19px;
+		}
+
+	#events, #weather{
+		font-size: 19px;
+		}
+
+	.content-box1{
+		display: flex;
+		justify-content: flex-end;
+		}
+
+	.grid-item-box2{
+		margin-right: 20px;
+		}
+
+	.content-box2{
+		margin-left: 20px;
+		}
+
+	.grid-item-box3{
+		margin-bottom: 0px;
+		margin-top: 50px;
+		}
+
+
+	.subtitelweather_box, .subtiteltodo_box, .subtitelevent_box{
+		height:60px;
+		}
+
+	.grid-item-box4{
+		border-top: 12px solid #182834;
+		}
 }

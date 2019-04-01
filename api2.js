@@ -32,7 +32,7 @@ function onAPISuccesEvent(response) {
 	for(var i=0; i<response.result.records.length; i++){
 		console.log(response.result.records[i]);
 		eventBox.innerHTML += '<ul>'
-							 + '<li>'+response.result.records[i].Evenement+'</ul>'
+							 + '<li>'+response.result.records[i].Evenement+ response.result.records[i].Dag +'</ul>'
 							 + '</ul>';
 		}
 	}
