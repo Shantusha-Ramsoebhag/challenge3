@@ -1,26 +1,28 @@
+//Maak functie weer
 function getAPIdataWeather() {
 var url = "https://api.openweathermap.org/data/2.5/weather?q=The Hague";
 var apiKey = "a99d5aa817d2e9a1e613dfc5b9465eb7";
 
-// construct request
+// Bouw verzoek
 
-	// get weather forecast
+	// Krijg weervoorspelling
 	fetch(url + "&appid=" + apiKey).then(function(response){
 		if (!response.ok) {
 			throw Error(response.statusText);
 		}
+		//Zoek naar Json formaat
 		return response.json();
 
 	})
 
-	// render weather per day
+	// Render weer per dag
 	.then(function(response) {
 		console.log(response);
-		// render weatherCondition
+		// Render weeromstandigheden
 		onAPISucces(response);
 	})
 
-	// catch error
+	// Vang fout
 	.catch(function (error) {
 		updateUIError();
 		console.error('Request failed', error);
@@ -39,7 +41,7 @@ function onAPISucces(response) {
 	var weatherBox = document.getElementById("weather");
 	weatherBox.innerHTML = "<p>" + degCInt + "&#176; C / " + degFInt + "&#176; F</p><p>" + condition + "</p>";
 	}
-
+//Maak error
 function updateUIError() {
 	var weatherBox = document.getElementById('weather');
 	weatherBox.className = 'hidden';

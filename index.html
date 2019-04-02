@@ -3,7 +3,7 @@
 <head>
 	<title>Back to Earth</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="challenge3.css">
+	<link rel="stylesheet" type="text/css" href="style/challenge3.css">
 </head>
 <body>
 	<div class="grid-container">
@@ -12,6 +12,7 @@
 				<h1 class="titel">Back to Earth</h1>
 			</header>
 		</div>
+		<!--Tekst met welkom en random activity generator-->
 		<div class="grid-item-box2">
 			<div class="content-box1">
 				<div class="todobox">
@@ -21,6 +22,7 @@
 						<div class="subtiteltodo_box">
 							<h3 class="subtiteltodo">Random activity generator, click for an activity:</h3>
 						</div>
+						<!--Button klikbaar, elke keer als je klikt een nieuwe activiteit-->
 						<input type="button" id="getActivity" value="Click me to see" onclick="getAPIdata()"/>
 					</div>
 				</div>	
@@ -38,6 +40,7 @@
 				</div>
 			</div>
 		</div>
+		<!--Events waar men naar toe kan-->
 		<div class="grid-item-box4">
 			<div class="content-box3">
 					<p class="text text2"><font size="5">You</font> could also visit an event. Below here there is a list of events you could go.</p>
@@ -58,8 +61,10 @@
 			</footer>
 		</div>
 	</div>
-	<script src="challenge3.js"></script>
-	<script src="apiweer.js"></script>
-	<script src="api2.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+	<script src="js/tweenmax.js"></script>
+	<script src="js/apirandomactivity.js"></script>
+	<script src="js/apiweer.js"></script>
+	<script src="js/apievents.js"></script>
 </body>
 </html>

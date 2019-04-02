@@ -1,32 +1,33 @@
-//functie aanmaken met GetAPI
+//Functie aanmaken met GetAPI
 function getAPIdataEvent() {
 	var url = "https://ckan.dataplatform.nl/api/action/datastore_search?resource_id=74ce8c18-02f1-4972-8ab4-b0e86b6b1336&q=feest";
-	// construct request
+	// Bouw verzoek
 	var request = url;
 
-	// get current weather
+	// Krijg evenement
 	fetch(request)
 
-	// parse to JSON format
+	// Zoek naar Json formaat
 	.then(function(response) {
 		return response.json();
 	})
 
-	/*.then(function(response) {
-		// render activity
-		onAPISucces(response);
-	})*/
-
-	// render random activity
+	// Geef willekeurig evenement weer
 	.then(function(response) {
 		console.log(response);
-		// render activity
+		// Evenement renderen
 		onAPISuccesEvent(response);
 	})
+
+	// Vang fout
+	.catch(function (error) {
+		updateUIErrorEvent();
+		console.error('Request failed', error);
+	});
 }
 
+//Functie api 
 function onAPISuccesEvent(response) {
-	//var event= response.records;
 	var eventBox = document.getElementById('events');
 	
 	for(var i=0; i<response.result.records.length; i++){
@@ -35,6 +36,11 @@ function onAPISuccesEvent(response) {
 							 + '<li>'+response.result.records[i].Evenement+ response.result.records[i].Dag +'</ul>'
 							 + '</ul>';
 		}
+	}
+//Maak error
+function updateUIErrorEvent() {
+	var eventsBox = document.getElementById('events');
+	eventsBox.className = 'hidden';
 	}
 
 getAPIdataEvent();
